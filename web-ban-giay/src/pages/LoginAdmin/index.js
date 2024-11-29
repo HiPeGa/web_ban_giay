@@ -29,6 +29,7 @@ function LoginAdmin() {
   }
 
   const handleSubmit = async (e) => {
+    sessionStorage.clear();
     const response = await checkInfomation(e.email, e.password);
     console.log(response);
     if(response){
@@ -56,7 +57,7 @@ function LoginAdmin() {
       {contextHolder}
       <div className="login-admin">
         <h1 className = "animate__animated animate__bounce">Login</h1>
-        <p>Bạn chưa có tài khoản? <NavLink to='#'>Đăng ký</NavLink></p>
+        {/* <p>Bạn chưa có tài khoản? <NavLink to='#'>Đăng ký</NavLink></p> */}
         <Form onFinish={handleSubmit}>
           <Form.Item name='email' rules={[{ required: true, message: 'Please input your username!' }]}>
             <Input placeholder="Email" />

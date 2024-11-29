@@ -18,7 +18,8 @@ function Profile() {
   const [openChangepass, setOpenChangePass] = useState(false);
   // Trạng thái điều khiển chế độ chỉnh sửa
   const [isEditing, setIsEditing] = useState(false);
-  const [form] = Form.useForm();
+  const [formInfo] = Form.useForm();
+  const [formPassword] = Form.useForm();
 
   const patchPassword = async (e) => {
     console.log(e);
@@ -65,7 +66,7 @@ function Profile() {
       if(response) {
         message.success('Đổi mật khẩu thành công!');
         setOpenChangePass(false);
-        form.resetFields();
+        formPassword.resetFields();
       }
       else {
         message.error('Đổi mật khẩu thất bại!');
@@ -135,6 +136,8 @@ function Profile() {
     setIsModalVisible(false);
     setIsEditing(false);
     setOpenChangePass(false);
+    formInfo.resetFields();
+    formPassword.resetFields();
   };
 
   // Chuyển chế độ sang chỉnh sửa
@@ -169,7 +172,7 @@ function Profile() {
         onCancel={handleCancel}
         footer={false}
       >
-        <Form layout="vertical" onFinish={handleSubmit} initialValues={user} form={form}>
+        <Form layout="vertical" onFinish={handleSubmit} initialValues={user} form={formInfo}>
           <Form.Item label="Họ tên" name="fullName">
             <Input
               disabled={!isEditing} // Khóa chỉnh sửa khi không ở chế độ chỉnh sửa
@@ -223,7 +226,7 @@ function Profile() {
         footer={false}
       >
         <Form
-          form={form}
+          form={formPassword}
           layout="vertical"
           name="change_password"
           onFinish={handleSubmitPass}

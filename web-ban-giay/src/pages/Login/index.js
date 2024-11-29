@@ -29,6 +29,7 @@ function Login() {
   }
 
   const handleSubmit = async (e) => {
+    sessionStorage.clear();
     const response = await checkInfomation(e.email, e.password);
     console.log(response);
     if(response){
