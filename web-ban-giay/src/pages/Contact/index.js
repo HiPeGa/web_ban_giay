@@ -79,7 +79,7 @@ const Contact = () => {
                 name="name"
                 rules={[{ required: true, message: 'Vui lòng nhập tên của bạn!' }]}
               >
-                <Input className = "area-hover" placeholder="Tên của bạn" prefix={<UserOutlined />} />
+                <Input placeholder="Tên của bạn" prefix={<UserOutlined />} />
               </Form.Item>
 
               <Form.Item
@@ -90,7 +90,7 @@ const Contact = () => {
                   { type: 'email', message: 'Định dạng email không hợp lệ!' },
                 ]}
               >
-                <Input className = "area-hover" placeholder="Email của bạn" prefix={<MailOutlined />} />
+                <Input placeholder="Email của bạn" prefix={<MailOutlined />} />
               </Form.Item>
 
               <Form.Item
@@ -98,7 +98,7 @@ const Contact = () => {
                 name="phone"
                 rules={[{ required: true, message: 'Vui lòng nhập số điện thoại của bạn!' }]}
               >
-                <Input className = "area-hover" placeholder="Số điện thoại của bạn" prefix={<PhoneOutlined />} />
+                <Input placeholder="Số điện thoại của bạn" prefix={<PhoneOutlined />} />
               </Form.Item>
 
               <Form.Item
@@ -106,7 +106,7 @@ const Contact = () => {
                 name="message"
                 rules={[{ required: true, message: 'Vui lòng nhập tin nhắn của bạn!' }]}
               >
-                <Input.TextArea className = "area-hover" placeholder="Viết tin nhắn của bạn ở đây" rows={4} />
+                <Input.TextArea placeholder="Viết tin nhắn của bạn ở đây" rows={4} />
               </Form.Item>
 
               <Form.Item>

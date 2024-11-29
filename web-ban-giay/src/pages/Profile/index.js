@@ -177,28 +177,28 @@ function Profile() {
             <Input
               disabled={!isEditing} // Khóa chỉnh sửa khi không ở chế độ chỉnh sửa
               style={{fontWeight: 'bold'}}
-              className='button-focus2 information'
+              className=' information'
             />
           </Form.Item>
           <Form.Item label="Email" name="email">
             <Input
               disabled={!isEditing}
               style={{fontWeight: 'bold'}}
-              className='button-focus2 information'
+              className=' information'
             />
           </Form.Item>
           <Form.Item label="Số điện thoại" name="phone">
             <Input
               disabled={!isEditing}
               style={{fontWeight: 'bold'}}
-              className='button-focus2 information'
+              className=' information'
             />
           </Form.Item>
           <Form.Item label="Địa chỉ" name="address">
             <Input
               disabled={!isEditing}
               style={{fontWeight: 'bold'}}
-              className='button-focus2 information'
+              className=' information'
             />
           </Form.Item>
           <Form.Item>
@@ -236,7 +236,7 @@ function Profile() {
             name="oldPassword"
             rules={[{ required: true, message: "Vui lòng nhập mật khẩu cũ!" }]}
           >
-            <Input.Password className='button-focus2' placeholder="Nhập mật khẩu cũ" />
+            <Input.Password className='' placeholder="Nhập mật khẩu cũ" />
           </Form.Item>
           <Form.Item
             label="Mật khẩu mới"
@@ -245,7 +245,7 @@ function Profile() {
               { required: true, message: "Vui lòng nhập mật khẩu mới!" },
             ]}
           >
-            <Input.Password className='button-focus2' placeholder="Nhập mật khẩu mới" />
+            <Input.Password className='' placeholder="Nhập mật khẩu mới" />
           </Form.Item>
           <Form.Item
             label="Xác nhận mật khẩu mới"
@@ -254,7 +254,7 @@ function Profile() {
               { required: true, message: "Vui lòng nhập mật khẩu mới!" },
             ]}
           >
-            <Input.Password className='button-focus2' placeholder="Nhập lại mật khẩu mới" />
+            <Input.Password className='' placeholder="Nhập lại mật khẩu mới" />
           </Form.Item>
           <Form.Item>
             <Button type='primary' htmlType='submit'>Đổi mật khẩu</Button>
